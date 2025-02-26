@@ -2,7 +2,6 @@ import type { VariantProps } from "class-variance-authority";
 import type { FC, PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
 
-import type { WithAnalyticsTagOptional } from "@/types";
 
 import { typographyVariants } from "./config";
 
@@ -12,18 +11,18 @@ type TypographyVariant<T> = T & {
   color?: Exclude<TypographyVariants["color"], null>;
 };
 
-export type TypographyProps = WithAnalyticsTagOptional<
+export type TypographyProps = 
   TypographyVariant<{
     id?: string;
     className?: string;
     onClick?: VoidFunction;
     disabled?: boolean;
   }>
->;
+;
 
 type TypographyComponent = FC<PropsWithChildren<TypographyProps>>;
 
-const Heading1: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const Heading1: TypographyComponent = ({ children, color, className, disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "Heading1", className, clickable: !!props.onClick, disabled }),
   );
@@ -31,7 +30,6 @@ const Heading1: TypographyComponent = ({ children, color, className, dataAnalyti
     <h1
       aria-level={1}
       className={typographyClass}
-      data-analytics-id={dataAnalyticsId}
       data-clickable={!!props.onClick}
       {...props}
     >
@@ -40,7 +38,7 @@ const Heading1: TypographyComponent = ({ children, color, className, dataAnalyti
   );
 };
 
-const Heading2: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const Heading2: TypographyComponent = ({ children, color, className, disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "Heading2", className, clickable: !!props.onClick, disabled }),
   );
@@ -48,7 +46,6 @@ const Heading2: TypographyComponent = ({ children, color, className, dataAnalyti
     <h2
       aria-level={2}
       className={typographyClass}
-      data-analytics-id={dataAnalyticsId}
       data-clickable={!!props.onClick}
       {...props}
     >
@@ -57,7 +54,7 @@ const Heading2: TypographyComponent = ({ children, color, className, dataAnalyti
   );
 };
 
-const Heading3: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const Heading3: TypographyComponent = ({ children, color, className, disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "Heading3", className, clickable: !!props.onClick, disabled }),
   );
@@ -65,7 +62,6 @@ const Heading3: TypographyComponent = ({ children, color, className, dataAnalyti
     <h3
       aria-level={3}
       className={typographyClass}
-      data-analytics-id={dataAnalyticsId}
       data-clickable={!!props.onClick}
       {...props}
     >
@@ -74,102 +70,102 @@ const Heading3: TypographyComponent = ({ children, color, className, dataAnalyti
   );
 };
 
-const Body: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const Body: TypographyComponent = ({ children, color, className, disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "Body", className, clickable: !!props.onClick, disabled }),
   );
   return (
-    <p className={typographyClass} data-analytics-id={dataAnalyticsId} data-clickable={!!props.onClick} {...props}>
+    <p className={typographyClass}  data-clickable={!!props.onClick} {...props}>
       {children}
     </p>
   );
 };
 
-const BodyMedium: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const BodyMedium: TypographyComponent = ({ children, color, className, disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "BodyMedium", className, clickable: !!props.onClick, disabled }),
   );
   return (
-    <p className={typographyClass} data-analytics-id={dataAnalyticsId} data-clickable={!!props.onClick} {...props}>
+    <p className={typographyClass} data-clickable={!!props.onClick} {...props}>
       {children}
     </p>
   );
 };
 
-const BodyBold: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const BodyBold: TypographyComponent = ({ children, color, className, disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "BodyBold", className, clickable: !!props.onClick, disabled }),
   );
   return (
-    <p className={typographyClass} data-analytics-id={dataAnalyticsId} data-clickable={!!props.onClick} {...props}>
+    <p className={typographyClass} data-clickable={!!props.onClick} {...props}>
       {children}
     </p>
   );
 };
 
-const Caption: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const Caption: TypographyComponent = ({ children, color, className, disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "Caption", className, clickable: !!props.onClick, disabled }),
   );
   return (
-    <span className={typographyClass} data-analytics-id={dataAnalyticsId} data-clickable={!!props.onClick} {...props}>
+    <span className={typographyClass} data-clickable={!!props.onClick} {...props}>
       {children}
     </span>
   );
 };
 
-const CaptionMedium: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const CaptionMedium: TypographyComponent = ({ children, color, className, disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "CaptionMedium", className, clickable: !!props.onClick, disabled }),
   );
   return (
-    <span className={typographyClass} data-analytics-id={dataAnalyticsId} data-clickable={!!props.onClick} {...props}>
+    <span className={typographyClass} data-clickable={!!props.onClick} {...props}>
       {children}
     </span>
   );
 };
 
-const CaptionBold: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const CaptionBold: TypographyComponent = ({ children, color, className, disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "CaptionBold", className, clickable: !!props.onClick, disabled }),
   );
   return (
-    <span className={typographyClass} data-analytics-id={dataAnalyticsId} data-clickable={!!props.onClick} {...props}>
+    <span className={typographyClass}  data-clickable={!!props.onClick} {...props}>
       {children}
     </span>
   );
 };
 
-const SubCaption: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const SubCaption: TypographyComponent = ({ children, color, className,  disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "SubCaption", className, clickable: !!props.onClick, disabled }),
   );
   return (
-    <span className={typographyClass} data-analytics-id={dataAnalyticsId} data-clickable={!!props.onClick} {...props}>
+    <span className={typographyClass}  data-clickable={!!props.onClick} {...props}>
       {children}
     </span>
   );
 };
 
-const SubCaptionMedium: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const SubCaptionMedium: TypographyComponent = ({ children, color, className, disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "SubCaptionMedium", className, clickable: !!props.onClick, disabled }),
   );
 
   return (
-    <span className={typographyClass} data-analytics-id={dataAnalyticsId} data-clickable={!!props.onClick} {...props}>
+    <span className={typographyClass}  data-clickable={!!props.onClick} {...props}>
       {children}
     </span>
   );
 };
 
-const SubCaptionBold: TypographyComponent = ({ children, color, className, dataAnalyticsId, disabled, ...props }) => {
+const SubCaptionBold: TypographyComponent = ({ children, color, className, disabled, ...props }) => {
   const typographyClass = twMerge(
     typographyVariants({ color, variant: "SubCaptionBold", className, clickable: !!props.onClick, disabled }),
   );
 
   return (
-    <span className={typographyClass} data-analytics-id={dataAnalyticsId} data-clickable={!!props.onClick} {...props}>
+    <span className={typographyClass} data-clickable={!!props.onClick} {...props}>
       {children}
     </span>
   );

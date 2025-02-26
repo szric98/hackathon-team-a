@@ -5,8 +5,35 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    
   </head>
   <body>
+    <style>
+      @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Define CSS variables for light mode */
+}
+
+.dark {
+  /* Override CSS variables for dark mode */
+}
+
+::-webkit-scrollbar {
+  @apply w-1 h-1;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 border-4 border-transparent rounded-lg bg-clip-padding;
+}
+
+    </style>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
