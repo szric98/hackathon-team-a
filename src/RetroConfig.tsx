@@ -8,9 +8,30 @@ import { postSprintCount } from "./connections/SprintPost";
 
 export const RetroConfig = () => {
 	const [sprintNumber, setSprintNumber] = useState<string>("1");
-	const [postSprintState, setPostSprintState] = useState<unknown>(null);
+	const [postSprintState, setPostSprintState] = useState<{
+		response?: "string";
+	}>({});
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState<string | null>(null);
 
-	console.log(postSprintState);
+	const handleGenerateRetro = async () => {
+		try {
+			setIsLoading(true);
+			setError(null);
+			const result = await postSprintCount(Number.parseInt(sprintNumber));
+			setPostSprintState(result);
+		} catch (err) {
+			setError(err instanceof Error ? err.message : "An error occurred");
+		} finally {
+			setIsLoading(false);
+		}
+	};
+
+	console.log("hello", {
+		response: JSON.parse(postSprintState.response ?? ""),
+		isLoading,
+		error,
+	});
 
 	return (
 		<Card size="lg">
@@ -69,15 +90,19 @@ export const RetroConfig = () => {
 				</Card>
 			</div>
 
-			<Button
-				onClick={() =>
-					setPostSprintState(postSprintCount(Number.parseInt(sprintNumber)))
-				}
-				size="xl"
-			>
-				<Icon icon="PlayIcon" className="fill-white size-4 mr-[10px]" />
-				Generate Retrospective
+			<Button onClick={handleGenerateRetro} size="xl" disabled={isLoading}>
+				<Icon
+					icon={"PlayIcon"}
+					className={`fill-white size-4 mr-[10px] ${isLoading ? "animate-spin" : ""}`}
+				/>
+				{isLoading ? "Generating..." : "Generate Retrospective"}
 			</Button>
+
+			{error && (
+				<Typography.Body color="error" className="mt-2">
+					{error}
+				</Typography.Body>
+			)}
 		</Card>
 	);
 };
