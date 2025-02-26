@@ -1,5 +1,4 @@
-import type { WithAnalyticsTagOptional } from "@/types";
-import { useCheckForAnalyticsId } from "@/utils/analytics";
+import { useCheckForAnalyticsId } from "../../../../utils/analytics";
 import type { DraggableAttributes, DraggableSyntheticListeners } from "@dnd-kit/core";
 import { cva } from "class-variance-authority";
 import type { FC, HTMLAttributes, PropsWithChildren, Ref } from "react";
