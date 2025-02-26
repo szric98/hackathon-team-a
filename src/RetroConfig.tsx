@@ -5,12 +5,58 @@ import { Typography } from "./renderers/components/atoms/typographies/Typography
 import { Button } from "./renderers/components/molecules/button/Button";
 import { SelectInput } from "./renderers/components/molecules/inputs/select-input/SelectInput";
 import { postSprintCount } from "./connections/SprintPost";
+import { StartStopContinueCard } from "./StartStopContinueCard";
+
+type AnalysisResponse = {
+	discussion_point: string;
+	group: "start" | "stop" | "continue";
+	item: string;
+	evidence: string;
+};
+
+export type FormattedResponsePoint = {
+	item: { label: string; subItems: { label: string; detail: string }[] };
+};
+
+const formatResponse = (responses: AnalysisResponse[]) => {
+	const formattedResponses = {
+		start: {
+			points: [] as FormattedResponsePoint[],
+		},
+		stop: {
+			points: [] as FormattedResponsePoint[],
+		},
+		continue: {
+			points: [] as FormattedResponsePoint[],
+		},
+	};
+
+	for (const response of responses) {
+		formattedResponses[response.group].points.push({
+			item: {
+				label: response.item,
+				subItems: [
+					{
+						label: "Evidence",
+						detail: response.evidence,
+					},
+					{
+						label: "Discussion Point",
+						detail: response.discussion_point,
+					},
+				],
+			},
+		});
+	}
+
+	return formattedResponses;
+};
 
 export const RetroConfig = () => {
 	const [sprintNumber, setSprintNumber] = useState<string>("1");
-	const [postSprintState, setPostSprintState] = useState<{
-		response?: "string";
-	}>({});
+	const [postSprintState, setPostSprintState] = useState<AnalysisResponse[]>(
+		[],
+	);
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState<string | null>(null);
 
@@ -19,7 +65,8 @@ export const RetroConfig = () => {
 			setIsLoading(true);
 			setError(null);
 			const result = await postSprintCount(Number.parseInt(sprintNumber));
-			setPostSprintState(result);
+			const resultParsed = JSON.parse(result.response);
+			setPostSprintState(resultParsed.analysis as AnalysisResponse[]);
 		} catch (err) {
 			setError(err instanceof Error ? err.message : "An error occurred");
 		} finally {
@@ -27,11 +74,7 @@ export const RetroConfig = () => {
 		}
 	};
 
-	console.log("hello", {
-		response: JSON.parse(postSprintState.response ?? ""),
-		isLoading,
-		error,
-	});
+	const formattedResponses = formatResponse(postSprintState);
 
 	return (
 		<Card size="lg">
@@ -97,6 +140,24 @@ export const RetroConfig = () => {
 				/>
 				{isLoading ? "Generating..." : "Generate Retrospective"}
 			</Button>
+
+			<div className="grid grid-cols-3 gap-4">
+				<StartStopContinueCard
+					title="Stop"
+					items={formattedResponses.stop.points}
+					loading={isLoading}
+				/>
+				<StartStopContinueCard
+					title="Start"
+					items={formattedResponses.start.points}
+					loading={isLoading}
+				/>
+				<StartStopContinueCard
+					title="Continue"
+					items={formattedResponses.continue.points}
+					loading={isLoading}
+				/>
+			</div>
 
 			{error && (
 				<Typography.Body color="error" className="mt-2">
