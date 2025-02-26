@@ -1,6 +1,6 @@
 export const postSprintCount = async (sprintCount: number) => {
 	try {
-		const response = await fetch("http://localhost:55000/sprints", {
+		const response = await fetch("http://localhost:8080/sprints", {
 			method: "POST",
 			mode: "no-cors",
 			headers: {
@@ -19,6 +19,5 @@ export const postSprintCount = async (sprintCount: number) => {
 		return data;
 	} catch (error) {
 		console.error("Error:", error);
-		throw error;
 	}
 };
