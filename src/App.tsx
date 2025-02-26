@@ -1,18 +1,26 @@
-import { SprintRiskLineChart } from './SprintRiskLineChart'
-import { Card } from './renderers/components/atoms/card/Card'
-import { Icon } from './renderers/components/atoms/icons/Icon'
 import { Typography } from './renderers/components/atoms/typographies/Typography'
+import { Badge } from './renderers/components/molecules/badge/Badge'
 import { Button } from './renderers/components/molecules/button/Button'
+import { RetroConfig } from './RetroConfig'
+import { SprintRiskLineChart } from './SprintRiskLineChart'
+
 
 function App() {
 
   return (
-    <div className="flex flex-col gap-2 p-10">
-      <Card size="lg">
-      <Typography.Heading1>This is a test</Typography.Heading1>
-      <Icon icon="AdminIcon" className="size-4 fill-brand-700" />
-      <Button>Click me</Button>
-      </Card>
+    <div className="flex flex-col gap-6 p-6 bg-gray-50">
+     <div className="flex justify-between items-center">
+
+
+     <div className="flex items-center gap-3">
+      <Typography.Heading2>Run a Retro</Typography.Heading2>
+      <Badge label="BETA"/>
+      </div>
+
+      <Button color="alternative" >Share</Button>
+     </div>
+
+     <RetroConfig />
 
     <SprintRiskLineChart />
     </div>
