@@ -19,14 +19,12 @@ type CardParams = Pick<
   listeners?: DraggableSyntheticListeners | null;
 };
 
-export type CardProps = WithAnalyticsTagOptional<CardParams>;
-export const Card: FC<PropsWithChildren<CardProps>> = (props) => {
+export const Card: FC<PropsWithChildren<CardParams>> = (props) => {
   const {
     ref,
     size,
     className,
     highlight = false,
-    dataAnalyticsId,
     onMouseEnter,
     onMouseLeave,
     style,
@@ -48,7 +46,6 @@ export const Card: FC<PropsWithChildren<CardProps>> = (props) => {
       onMouseLeave={onMouseLeave}
       style={style}
       className={twMerge(containerClassname, className)}
-      data-analytics-id={dataAnalyticsId}
       data-testid={dataTestId}
       {...attributes}
       {...listeners}
