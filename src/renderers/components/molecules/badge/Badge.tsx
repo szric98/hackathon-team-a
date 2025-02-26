@@ -64,7 +64,6 @@ export const Badge: FC<BadgeProps> = ({
 					icon={action.icon ?? "XOutlineIcon"}
 					className={secondaryIconClassName}
 					onClick={action.onClick}
-					dataAnalyticsId={action.dataAnalyticsId}
 				/>
 			)}
 		</BadgeTypography>

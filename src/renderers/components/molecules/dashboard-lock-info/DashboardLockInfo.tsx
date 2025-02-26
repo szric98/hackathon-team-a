@@ -49,17 +49,9 @@ export const DashboardLockInfo: FC<DashboardLockInfoProps> = ({
 					onClick={runMutation}
 				>
 					{locked ? (
-						<Icon
-							icon="LockIcon"
-							dataAnalyticsId="lock-dashboard"
-							className="size-3.5 fill-gray-500"
-						/>
+						<Icon icon="LockIcon" className="size-3.5 fill-gray-500" />
 					) : (
-						<Icon
-							icon="LockOpenIcon"
-							dataAnalyticsId="unlock-dashboard"
-							className="size-3.5 fill-gray-500"
-						/>
+						<Icon icon="LockOpenIcon" className="size-3.5 fill-gray-500" />
 					)}
 					<Typography.CaptionMedium color="secondary">
 						{label}

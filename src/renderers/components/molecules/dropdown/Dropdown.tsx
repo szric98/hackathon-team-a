@@ -1,4 +1,3 @@
-import { useSearchFilter } from "@/hooks/use-search-filter";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { cva } from "class-variance-authority";
 import type { FC } from "react";
@@ -11,7 +10,8 @@ import { Typography } from "../../atoms/typographies/Typography";
 import { SearchInput } from "../inputs/search-input/SearchInput";
 import { callInOrder } from "../../../../utils/fn-utils";
 import { WithTooltip } from "../tooltip/WithTooltip";
-import type { WithAnalyticsTag } from "../../../types";
+import type { WithAnalyticsTag, WithAriaLabel } from "../../../types";
+import { useSearchFilter } from "../../../../hooks/use-search-filter";
 
 const UNCATEGORIZED_KEY = "<Uncategorized>";
 

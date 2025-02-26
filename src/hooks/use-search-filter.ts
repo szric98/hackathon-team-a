@@ -2,7 +2,7 @@ import { debounce, flow } from "es-toolkit";
 import { useState } from "react";
 
 // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-type DebouncedFunc<F extends (...args: any[]) => void> = ReturnType<typeof debounce<F>>;
+type DebouncedFunc<F extends (...args: unknown[]) => void> = ReturnType<typeof debounce<F>>;
 
 type FilterFn<T> = (list: T[]) => T[];
 
@@ -22,7 +22,7 @@ const valueNotChange = (value: string) => value;
 type SearchFilter<T = unknown> = {
   searchTerm: string;
   applySearchFilterFn: FilterFn<T>;
-  changeSearchTerm: DebouncedFunc<(value: string) => void>;
+  changeSearchTerm: DebouncedFunc<(...args: unknown[]) => void>;
 };
 
 export const useSearchFilter = <T>(props: {
