@@ -66,6 +66,19 @@
     --chart-5: 27 87% 67%;
 
     --radius: 0.5rem
+
+
+
+    --color-1: #4A90E2; /* soft blue */
+    --color-2: #7ED321; /* soft green */
+    --color-3: #F5A623; /* muted orange */
+    --color-4: #F8E71C; /* soft yellow */
+    --color-5: #50E3C2; /* mint green */
+    --color-6: #9013FE; /* light purple */
+    --color-7: #B8E986; /* light lime green */
+    --color-8: #D0021B; /* soft red */
+    --color-9: #8B572A; /* earthy brown */
+    --color-10: #F2C94C; /* golden yellow */
   }
   .dark {
 
@@ -116,6 +129,18 @@
     --chart-4: 280 65% 60%;
 
     --chart-5: 340 75% 55%
+
+
+    --color-1: #4A90E2; /* soft blue */
+    --color-2: #7ED321; /* soft green */
+    --color-3: #F5A623; /* muted orange */
+    --color-4: #F8E71C; /* soft yellow */
+    --color-5: #50E3C2; /* mint green */
+    --color-6: #9013FE; /* light purple */
+    --color-7: #B8E986; /* light lime green */
+    --color-8: #D0021B; /* soft red */
+    --color-9: #8B572A; /* earthy brown */
+    --color-10: #F2C94C; /* golden yellow */
   }
 }
 

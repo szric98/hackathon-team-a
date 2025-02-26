@@ -68,7 +68,6 @@ export function SprintRiskLineChart() {
 
     const finalChartData = transformData(chartData);
 
-    console.log("FINAL", finalChartData);
 
     const chartConfig: ChartConfig = {};
 
@@ -83,7 +82,6 @@ export function SprintRiskLineChart() {
     return { chartData: finalChartData, chartConfig };
   }, []);
 
-  console.log(chartConfig)
 
   const chartConfigEntries = Object.entries(chartConfig);
 

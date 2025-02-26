@@ -2,6 +2,7 @@ import { Typography } from "./renderers/components/atoms/typographies/Typography
 import { Badge } from "./renderers/components/molecules/badge/Badge";
 import { Button } from "./renderers/components/molecules/button/Button";
 import { RetroConfig } from "./RetroConfig";
+import { SprintRiskFactorsBarChart } from "./SprintRiskFactorsBarChart";
 import { SprintRiskLineChart } from "./SprintRiskLineChart";
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
 			<RetroConfig />
 
 			<SprintRiskLineChart />
+      <SprintRiskFactorsBarChart/>
 		</div>
 	);
 }
