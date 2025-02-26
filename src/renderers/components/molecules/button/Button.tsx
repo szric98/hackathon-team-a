@@ -27,11 +27,9 @@ type ButtonParams = Pick<
 	ariaExpanded?: boolean;
 };
 
-export type ButtonProps = WithAnalyticsTag<ButtonParams>;
-export const Button: FC<ButtonProps> & {
+export const Button: FC<ButtonParams> & {
 	Icon: FC<IconButtonProps>;
 } = ({
-	dataAnalyticsId,
 	size,
 	onClick,
 	color = "default",
@@ -51,7 +49,6 @@ export const Button: FC<ButtonProps> & {
 			disabled={disabled}
 			isProcessing={isProcessing}
 			pill={pill}
-			data-analytics-id={dataAnalyticsId}
 			size={size}
 			onClick={onClick}
 			className={className}
