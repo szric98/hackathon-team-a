@@ -3,6 +3,8 @@
 import { TrendingUp } from "lucide-react"
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
+import sprintRisk from './data/sprint-risk.csv';
+
 import {
   Card,
   CardContent,
@@ -38,6 +40,8 @@ const chartConfig = {
 } satisfies ChartConfig
 
 export function ChartExample() {
+  console.log(sprintRisk);
+
   return (
     <Card>
       <CardHeader>

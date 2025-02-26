@@ -1,0 +1,69 @@
+Sprint 49,,,,,,,,,,,,,,,,
+Insight,Impact,Sprint Weight,Day 1,Day 2,Day 3,Day 4,Day 5,Day 6,Day 7,Day 8,Day 9,Day 10,Day 11,Day 12,Day 13,Day 14
+Sprint Burndown - Burndown rate expected for the current sprint and how far from it the current sprint is.,1 - High Impact,100,0,0,0,23,23,23,23,23,50,50,50,50,75,75
+Tickets Without Commits - Tickets waiting for a commit for longer than usual.,2 - Medium Impact,33,0,0,0,0,0,33,33,33,33,33,33,33,33,33
+Delayed Pull Requests - Pull Requests take longer than expected in a particular stage.,2 - Medium Impact,33,0,0,0,34,34,34,15,0,0,0,23,23,23,23
+Delayed Tickets - Tickets taking longer than expected in a particular status.,2 - Medium Impact,33,0,0,0,15,15,0,0,0,0,0,34,34,34,50
+More Repositories Changed - More repos changed than usual on a ticket.,3 - Low Impact,15,0,0,0,50,50,50,50,50,50,0,0,0,0,0
+More Files Changed - More changed files than usual on a ticket.,3 - Low Impact,15,0,0,0,0,0,0,0,45,45,45,45,45,0,0
+Increased Developers - More developers are working on a ticket than usual.,3 - Low Impact,15,0,0,0,30,30,30,30,0,0,0,30,30,0,0
+Carryovers - Number of tickets being carried over from a previous sprint.,3 - Low Impact,15,20,20,20,20,20,20,20,20,20,20,20,20,20,20
+Distractions - Tickets being worked on outside of the sprint or epic.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Added Work - Work added after the sprint started.,3 - Low Impact,15,0,0,25,25,25,25,25,25,25,25,25,25,25,25
+,,Total risk,3,3,6.75,57.92,57.92,63.86,57.59,54.89,81.89,74.39,97.7,97.7,100,100
+,,,,,,,,,,,,,,,,
+Sprint 48,,,,,,,,,,,,,,,,
+Insight,Impact,Sprint Weight,Day 1,Day 2,Day 3,Day 4,Day 5,Day 6,Day 7,Day 8,Day 9,Day 10,Day 11,Day 12,Day 13,Day 14
+Sprint Burndown - Burndown rate expected for the current sprint and how far from it the current sprint is.,1 - High Impact,100,0,0,0,0,10,15,20,30,40,50,60,70,80,90
+Tickets Without Commits - Tickets waiting for a commit for longer than usual.,2 - Medium Impact,33,0,0,0,0,0,20,25,30,25,20,15,10,5,0
+Delayed Pull Requests - Pull Requests take longer than expected in a particular stage.,2 - Medium Impact,33,0,0,0,0,0,15,20,25,20,15,10,5,0,0
+Delayed Tickets - Tickets taking longer than expected in a particular status.,2 - Medium Impact,33,0,0,0,0,0,0,0,20,25,20,15,10,5,0
+More Repositories Changed - More repos changed than usual on a ticket.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+More Files Changed - More changed files than usual on a ticket.,3 - Low Impact,15,0,0,0,0,0,0,0,25,20,15,10,5,0,0
+Increased Developers - More developers are working on a ticket than usual.,3 - Low Impact,15,0,0,0,0,0,0,0,20,15,10,5,0,0,0
+Carryovers - Number of tickets being carried over from a previous sprint.,3 - Low Impact,15,15,15,15,15,15,10,5,0,0,0,0,0,0,0
+Distractions - Tickets being worked on outside of the sprint or epic.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Added Work - Work added after the sprint started.,3 - Low Impact,15,0,0,0,10,10,10,10,10,10,10,10,10,10,10
+,,Total risk,2.25,2.25,2.25,3.75,13.75,29.55,37.1,63,69.85,73.4,76.95,80.5,84.8,91.5
+,,,,,,,,,,,,,,,,
+Sprint 47,,,,,,,,,,,,,,,,
+Insight,Impact,Sprint Weight,Day 1,Day 2,Day 3,Day 4,Day 5,Day 6,Day 7,Day 8,Day 9,Day 10,Day 11,Day 12,Day 13,Day 14
+Sprint Burndown - Burndown rate expected for the current sprint and how far from it the current sprint is.,1 - High Impact,100,0,0,5,10,15,25,35,45,55,65,75,85,90,95
+Tickets Without Commits - Tickets waiting for a commit for longer than usual.,2 - Medium Impact,33,0,0,0,0,10,15,20,25,30,25,20,15,10,5
+Delayed Pull Requests - Pull Requests take longer than expected in a particular stage.,2 - Medium Impact,33,0,0,0,0,0,10,15,20,25,20,15,10,5,0
+Delayed Tickets - Tickets taking longer than expected in a particular status.,2 - Medium Impact,33,0,0,0,5,10,15,20,25,30,25,20,15,10,5
+More Repositories Changed - More repos changed than usual on a ticket.,3 - Low Impact,15,0,0,0,0,0,0,10,15,0,0,0,0,0,0
+More Files Changed - More changed files than usual on a ticket.,3 - Low Impact,15,0,0,0,0,0,0,0,10,15,0,0,0,0,0
+Increased Developers - More developers are working on a ticket than usual.,3 - Low Impact,15,0,0,0,0,0,0,0,0,10,5,0,0,0,0
+Carryovers - Number of tickets being carried over from a previous sprint.,3 - Low Impact,15,10,10,10,10,10,10,10,10,5,0,0,0,0,0
+Distractions - Tickets being worked on outside of the sprint or epic.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Added Work - Work added after the sprint started.,3 - Low Impact,15,0,0,0,5,10,10,10,10,10,10,10,10,10,10
+,,Total risk,1.5,1.5,6.5,13.9,24.6,41.2,57.65,74.85,89.05,90.35,94.65,99.7,99.75,99.8
+,,,,,,,,,,,,,,,,
+Sprint 46,,,,,,,,,,,,,,,,
+Insight,Impact,Sprint Weight,Day 1,Day 2,Day 3,Day 4,Day 5,Day 6,Day 7,Day 8,Day 9,Day 10,Day 11,Day 12,Day 13,Day 14
+Sprint Burndown - Burndown rate expected for the current sprint and how far from it the current sprint is.,1 - High Impact,100,0,0,0,0,0,0,0,10,30,50,70,80,90,95
+Tickets Without Commits - Tickets waiting for a commit for longer than usual.,2 - Medium Impact,33,0,0,0,0,0,0,0,0,10,20,30,25,20,15
+Delayed Pull Requests - Pull Requests take longer than expected in a particular stage.,2 - Medium Impact,33,0,0,0,0,0,0,0,0,0,10,20,15,10,5
+Delayed Tickets - Tickets taking longer than expected in a particular status.,2 - Medium Impact,33,0,0,0,0,0,0,0,0,0,0,10,15,20,25
+More Repositories Changed - More repos changed than usual on a ticket.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+More Files Changed - More changed files than usual on a ticket.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Increased Developers - More developers are working on a ticket than usual.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Carryovers - Number of tickets being carried over from a previous sprint.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Distractions - Tickets being worked on outside of the sprint or epic.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Added Work - Work added after the sprint started.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,Total risk,0,0,0,0,0,0,0,10,33.3,59.9,89.8,98.15,100,100
+,,,,,,,,,,,,,,,,
+Sprint 45,,,,,,,,,,,,,,,,
+Insight,Impact,Sprint Weight,Day 1,Day 2,Day 3,Day 4,Day 5,Day 6,Day 7,Day 8,Day 9,Day 10,Day 11,Day 12,Day 13,Day 14
+Sprint Burndown - Burndown rate expected for the current sprint and how far from it the current sprint is.,1 - High Impact,100,0,0,0,0,10,20,30,40,50,60,70,80,90,95
+Tickets Without Commits - Tickets waiting for a commit for longer than usual.,2 - Medium Impact,33,0,0,0,0,0,10,15,20,25,20,15,10,5,0
+Delayed Pull Requests - Pull Requests take longer than expected in a particular stage.,2 - Medium Impact,33,0,0,0,0,0,0,10,15,20,15,10,5,0,0
+Delayed Tickets - Tickets taking longer than expected in a particular status.,2 - Medium Impact,33,0,0,0,0,0,0,0,10,20,15,10,5,0,0
+More Repositories Changed - More repos changed than usual on a ticket.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+More Files Changed - More changed files than usual on a ticket.,3 - Low Impact,15,0,0,0,0,0,0,0,0,10,15,0,0,0,0
+Increased Developers - More developers are working on a ticket than usual.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Carryovers - Number of tickets being carried over from a previous sprint.,3 - Low Impact,15,10,10,10,10,10,10,10,5,0,0,0,0,0,0
+Distractions - Tickets being worked on outside of the sprint or epic.,3 - Low Impact,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Added Work - Work added after the sprint started.,3 - Low Impact,15,0,0,0,10,15,15,15,15,15,15,15,15,15,15
+,,Total risk,1.5,1.5,1.5,3,13.75,27.05,42,57.85,75.2,81,83.8,88.85,93.9,97.25
