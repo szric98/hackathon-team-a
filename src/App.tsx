@@ -1,4 +1,4 @@
-import { ChartExample } from './ChartExample'
+import { SprintRiskLineChart } from './SprintRiskLineChart'
 import { Card } from './renderers/components/atoms/card/Card'
 import { Icon } from './renderers/components/atoms/icons/Icon'
 import { Typography } from './renderers/components/atoms/typographies/Typography'
@@ -14,7 +14,7 @@ function App() {
       <Button>Click me</Button>
       </Card>
 
-    <ChartExample />
+    <SprintRiskLineChart />
     </div>
   )
 }
