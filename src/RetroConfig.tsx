@@ -119,7 +119,7 @@ export const RetroConfig = () => {
 
 				<Card size="md" className="p-5 gap-4">
 					<SelectInput
-						label="Select a Sprint"
+						label="Retrospective Categories"
 						placeholder="Retrospective Categories"
 						items={[{ label: "Start, Stop, Continue", key: "ssc" }]}
 						dataAnalyticsId=""
