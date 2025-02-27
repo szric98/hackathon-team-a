@@ -5,23 +5,17 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
-  Legend,
-  Line,
-  LineChart,
   XAxis,
-  YAxis,
 } from "recharts";
 
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
+
   CardHeader,
   CardTitle,
 } from "./components/ui/card";
 import {
-  ChartConfig,
   ChartContainer,
   ChartLegend,
   ChartLegendContent,
@@ -31,10 +25,6 @@ import {
 import { useMemo } from "react";
 import rawChartData from "./data/insights-risk.csv";
 
-type SprintData = {
-  sprint: string;
-  [key: string]: string;
-};
 
 export function SprintRiskFactorsBarChart() {
   console.log(rawChartData);
@@ -61,14 +51,7 @@ export function SprintRiskFactorsBarChart() {
     return Object.values(transformed);
   }
 
-  function getRandomHexColor() {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
+
   const { chartData, chartConfig, chartConfigAsArray } = useMemo(() => {
     const chartData = transformData(rawChartData);
 
@@ -78,7 +61,7 @@ export function SprintRiskFactorsBarChart() {
           // Exclude the 'key' property
           return {
             label: key,
-            color: `var(--color-${index+1})`,
+            color: `var(--color-${index})`,
           };
         }
       })
@@ -100,6 +83,14 @@ export function SprintRiskFactorsBarChart() {
   console.log('config', chartConfig);
   console.log('config')
 
+
+  const chartDataprocessed = chartData.map(entry => {
+    const { key, ...rest } = entry;
+    const sortedEntries = Object.entries(rest).sort((a, b) => b[1] - a[1]); // Sort by value, descending
+    const top5Entries = Object.fromEntries(sortedEntries.slice(0, 5)); // Keep top 5 values
+    return { key, ...top5Entries };
+})
+
   return (
     <Card>
       <CardHeader>
@@ -107,7 +98,7 @@ export function SprintRiskFactorsBarChart() {
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
-          <BarChart accessibilityLayer data={chartData}>
+          <BarChart accessibilityLayer data={chartDataprocessed}>
             <CartesianGrid vertical={false} />
             <XAxis
               dataKey="month"
